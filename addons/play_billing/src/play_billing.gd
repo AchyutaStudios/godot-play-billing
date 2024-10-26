@@ -171,12 +171,15 @@ func _billing_resume() -> void:
 	billing_resume.emit()
 
 
-func _connect_error(error_code: BillingResponseCode, debug_message: String) -> void:
+func _connect_error(
+	error_code: BillingResponseCode, debug_message: String) -> void:
 	connect_error.emit(error_code, debug_message) 
 
 
 func _query_purchases_response(purchase_list: String) -> void:
-	query_purchases_response.emit(Utility.from_Json_to_Purchase_List(purchase_list))
+	query_purchases_response.emit(
+		Utility.from_Json_to_Purchase_List(purchase_list)
+	)
 
 
 func _query_purchases_error(error_code: BillingResponseCode, debug_message: String) -> void:
@@ -184,7 +187,9 @@ func _query_purchases_error(error_code: BillingResponseCode, debug_message: Stri
 
 
 func _product_details_query_completed(product_detail_list: String) -> void:
-	product_details_query_completed.emit(Utility.from_Json_to_ProductDetails_List(product_detail_list))
+	product_details_query_completed.emit(
+		Utility.from_Json_to_ProductDetails_List(product_detail_list)
+	)
 
 
 func _product_details_query_error(error_code: BillingResponseCode, 
@@ -196,7 +201,8 @@ func _purchases_updated(purchases: String) -> void:
 	purchases_updated.emit(Utility.from_Json_to_Purchase_List(purchases))
 
 
-func _purchases_updated_error(error_code: BillingResponseCode, debug_message: String) -> void:
+func _purchases_updated_error(error_code: BillingResponseCode, 
+	debug_message: String) -> void:
 	purchases_updated_error.emit(error_code, debug_message)
 
 
