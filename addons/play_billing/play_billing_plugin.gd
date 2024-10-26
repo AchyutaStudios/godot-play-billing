@@ -20,7 +20,9 @@ class PlayBillingExportPlugin extends EditorExportPlugin:
 	
 	
 	func _get_android_libraries(platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
-		return PackedStringArray(["res://android/plugins/GodotPlayBilling-release.aar"])
+		if debug:
+			return PackedStringArray(["res://addons/aar/GodotPlayBilling-debug.aar"])
+		return PackedStringArray(["res://addons/aar/GodotPlayBilling-release.aar"])
 	
 	
 	func _get_android_dependencies(platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
