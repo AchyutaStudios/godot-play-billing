@@ -19,14 +19,22 @@ class PlayBillingExportPlugin extends EditorExportPlugin:
 		return false
 	
 	
-	func _get_android_libraries(platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
+	func _get_android_libraries(
+		platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
 		if debug:
-			return PackedStringArray(["res://addons/aar/GodotPlayBilling-debug.aar"])
-		return PackedStringArray(["res://addons/aar/GodotPlayBilling-release.aar"])
+			return PackedStringArray(
+				["res://addons/play_billing/aar/GodotPlayBilling-debug.aar"]
+			)
+		return PackedStringArray(
+			["res://addons/play_pilling/aar/GodotPlayBilling-release.aar"]
+		)
 	
 	
-	func _get_android_dependencies(platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
-		return PackedStringArray(["com.android.billingclient:billing-ktx:7.1.1"])
+	func _get_android_dependencies(
+		platform: EditorExportPlatform, debug: bool) -> PackedStringArray:
+		return PackedStringArray(
+			["com.android.billingclient:billing-ktx:7.1.1"]
+		)
 
 
 func _enter_tree() -> void:
