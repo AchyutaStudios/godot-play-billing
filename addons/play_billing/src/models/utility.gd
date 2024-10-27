@@ -3,7 +3,9 @@ extends Object
 class_name Utility
 
 
-static func from_Json_to_PricingPhase_List(data: Variant) -> Array[ProductDetail.PricingPhase]:
+static func from_Json_to_PricingPhase_List(
+	data: Variant
+	) -> Array[ProductDetail.PricingPhase]:
 	var pricing_phase_list: Array[ProductDetail.PricingPhase] = []
 	
 	for item in data:
@@ -13,7 +15,9 @@ static func from_Json_to_PricingPhase_List(data: Variant) -> Array[ProductDetail
 	return pricing_phase_list
 
 
-static func from_Json_to_SubscriptionOfferDetails_List(data: Variant) -> Array[ProductDetail.SubscriptionOfferDetails]:
+static func from_Json_to_SubscriptionOfferDetails_List(
+	data: Variant
+	) -> Array[ProductDetail.SubscriptionOfferDetails]:
 	var list: Array[ProductDetail.SubscriptionOfferDetails] = []
 	
 	for item in data:
@@ -34,7 +38,9 @@ static func from_Json_to_Purchase_List(json_string: String) -> Array[Purchase]:
 	return list
 
 
-static func from_Json_to_ProductDetails_List(json_string: String) -> Array[ProductDetail]:
+static func from_Json_to_ProductDetails_List(
+	json_string: String
+	) -> Array[ProductDetail]:
 	var list: Array[ProductDetail] = []
 	var data = JSON.parse_string(json_string)
 	

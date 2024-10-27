@@ -12,9 +12,11 @@ var subscription_offer_detail_list: Array[SubscriptionOfferDetails]
 var title: String
 
 
-func _init(name: String, description: String, one_time_purchase_offer_details: OneTimePurchaseOfferDetails, 
-			product_id: String, product_type: String, subscription_offer_detail_list: Array[SubscriptionOfferDetails], 
-			title: String):
+func _init(name: String, description: String, 
+	one_time_purchase_offer_details: OneTimePurchaseOfferDetails, 
+	product_id: String, product_type: String, 
+	subscription_offer_detail_list: Array[SubscriptionOfferDetails], 
+	title: String):
 	self.name = name
 	self.description = description
 	self.one_time_purchase_offer_details = one_time_purchase_offer_details
@@ -105,7 +107,10 @@ class OneTimePurchaseOfferDetails:
 	var price_amount_micros: float
 	var price_currency_code: String
 	
-	func _init(formatted_price: String, price_amount_micros: float, price_currency_code: String):
+	func _init(
+		formatted_price: String, 
+		price_amount_micros: float, 
+		price_currency_code: String):
 		self.formatted_price = formatted_price
 		self.price_amount_micros = price_amount_micros
 		self.price_currency_code = price_currency_code
@@ -130,7 +135,9 @@ class InstallmentPlanDetails:
 	var subsequent_installment_plan_commitment_payments_count: int
 	
 	
-	func _init(installment_plan_commitment_payments_count: int, subsequent_installment_plan_commitment_payments_count: int):
+	func _init(
+		installment_plan_commitment_payments_count: int, 
+		subsequent_installment_plan_commitment_payments_count: int):
 		self.installment_plan_commitment_payments_count = installment_plan_commitment_payments_count
 		self.subsequent_installment_plan_commitment_payments_count = subsequent_installment_plan_commitment_payments_count
 	
