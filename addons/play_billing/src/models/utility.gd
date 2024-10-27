@@ -24,6 +24,10 @@ extends Object
 class_name Utility
 
 
+## Converts a JSON array to a list of PricingPhase objects.[br][br]
+## [param data]: A [Variant] containing JSON data representing 
+## PricingPhase objects.[br][br]
+## Returns an Array of [ProductDetail.PricingPhase].
 static func from_Json_to_PricingPhase_List(
 	data: Variant
 	) -> Array[ProductDetail.PricingPhase]:
@@ -36,6 +40,10 @@ static func from_Json_to_PricingPhase_List(
 	return pricing_phase_list
 
 
+## Converts a JSON array to a list of SubscriptionOfferDetails objects.[br][br]
+## [param data]: A [Variant] containing JSON data representing 
+## SubscriptionOfferDetails objects.[br][br]
+## Returns an Array of [ProductDetail.SubscriptionOfferDetails].
 static func from_Json_to_SubscriptionOfferDetails_List(
 	data: Variant
 	) -> Array[ProductDetail.SubscriptionOfferDetails]:
@@ -48,6 +56,10 @@ static func from_Json_to_SubscriptionOfferDetails_List(
 	return list
 
 
+## Converts a JSON string to a list of Purchase objects.[br][br]
+## [param json_string]: A string containing JSON data representing Purchase 
+## objects.[br][br]
+## Returns an Array of [Purchase].
 static func from_Json_to_Purchase_List(json_string: String) -> Array[Purchase]:
 	var list: Array[Purchase] = []
 	var data = JSON.parse_string(json_string)
@@ -59,6 +71,10 @@ static func from_Json_to_Purchase_List(json_string: String) -> Array[Purchase]:
 	return list
 
 
+## Converts a JSON string to a list of ProductDetail objects.[br][br]
+## [param json_string]: A string containing JSON data representing 
+## ProductDetail objects.[br][br]
+## Returns an Array of [ProductDetail].
 static func from_Json_to_ProductDetails_List(
 	json_string: String
 	) -> Array[ProductDetail]:
