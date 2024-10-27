@@ -1,9 +1,14 @@
+## This is the main plugin class for integrating Google Play Billing into Godot.
+
+## It extends the EditorPlugin class and provides functionality for exporting
+## the PlayBilling plugin on the Android platform.
 @tool
 class_name PlayBillingPlugin extends EditorPlugin
 
 
 var _export_plugin: PlayBillingExportPlugin
 
+## Stores the version of the PlayBilling plugin retrieved from VersionHelper
 var plugin_version: String = VersionHelper.get_plugin_version()
 
 
