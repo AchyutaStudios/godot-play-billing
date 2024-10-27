@@ -21,6 +21,12 @@
 
 extends Object
 
+
+## A utility class providing various static helper functions to convert JSON data into various 
+## object lists such as PricingPhase, SubscriptionOfferDetails, Purchase, and ProductDetail.
+##
+## This class serves as a helper for parsing and transforming data structures 
+## received from billing-related services into usable Godot objects.
 class_name Utility
 
 
