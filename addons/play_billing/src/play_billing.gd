@@ -211,7 +211,7 @@ func purchase(product_id: String) -> Dictionary:
 ## Initiates a subscription for the specified product ID with an optional offer token.[br][br]
 ## [param product_id] The ID of the product to subscribe to.[br]
 ## [param selected_offer_token] An optional token for the selected offer 
-##(default is an empty string).[br]br]
+## (default is an empty string).[br]br]
 ## Returns a dictionary containing subscription state.
 func subscribe(product_id: String, selected_offer_token: String = "") -> Dictionary:
 	if _plugin:
