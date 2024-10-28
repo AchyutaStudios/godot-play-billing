@@ -3,6 +3,7 @@ theme:
   name: material
   logo: assets/icon_white.png
   favicon: assets/icon.png
+  copyright: "© 2024-present Achyuta Studios. All rights reserved."
   palette: 
     - media: "(prefers-color-scheme)"
       toggle:
@@ -33,6 +34,22 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+nav:
+  - Get Started:
+    - Home: get-started/index.md
+    - Download: get-started/download.md
+    - Installation: get-started/installation.md
+  - Integrate Play Billing: integrate.md
+  - Api Reference:
+    - Play Billing: api-reference/play-billing.md
+    - Models:
+      - Purchase: api-reference/models/purchase.md
+      - ProductDetail:
+        - Home: api-reference/models/product-detail/index.md
+        - Pricing Phase: api-reference/models/product-detail/pricing-phase.md
+        - OneTimePurchaseOfferDetails: api-reference/models/product-detail/purchase-offer.md
+        - InstallmentPlanDetails: api-reference/models/product-detail/installment-plan-details.md
+        - SubscriptionOfferDetails: api-reference/models/product-detail/subscription-offer-details.md
 plugins:
  - redirects:
     redirect_maps:
@@ -41,3 +58,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       linenums: true
+extra:
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/AchyutaStudios
+copyright: Copyright &copy; 2024-present Achyuta Studios. All rights reserved.
