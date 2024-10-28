@@ -1,1 +1,43 @@
-site_name: My Docs
+site_name: Godot Play Billing
+theme:
+  name: material
+  logo: assets/icon_white.png
+  favicon: assets/icon.png
+  palette: 
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: blue
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: blue
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: blue
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+plugins:
+ - redirects:
+    redirect_maps:
+      'index.md': 'get-started/index.md' 
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
