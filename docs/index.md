@@ -27,4 +27,4 @@ To get started, follow these steps:
 To successfully integrate this library, it’s essential to understand the fundamentals of the Google Play Billing system. The following resources provide a comprehensive overview:
 
 - [Google Play's billing system](https://developer.android.com/google/play/billing).
-- [Integrate the Google Play Billing Library into your app](https://developer.android.com/google/play/billing/integrate)
+- [Integrate the Google Play Billing Library into your app](https://developer.android.com/google/play/billing/integrate).

@@ -166,7 +166,7 @@ func _on_play_billing_purchase_consumption_error(error_code: PlayBilling.Billing
 
 ## Handling pending Purchases
 
-Purchases can happen outside the app due to poor connection, pending transactions or various other reasong. It is necessary to handle such purchases. Call [query_purchase](./api-reference/play-billing.md#query_purchase) method to query purchases. [query_purchase](./api-reference/play-billing.md#query_purchase) requires [ProductType](./api-reference/play-billing.md#producttype) argument. Generally you would like to query purchase after product details query is completed or when billing client is connected.
+Purchases can happen outside the app due to poor connection, pending transactions or various other reasons. It is necessary to handle such purchases. Call [query_purchase](./api-reference/play-billing.md#query_purchase) method to query purchases. [query_purchase](./api-reference/play-billing.md#query_purchase) requires [ProductType](./api-reference/play-billing.md#producttype) argument. Generally you would like to query purchase after product details query is completed or when billing client is connected.
 
 ```gdscript
 _play_billing.query_purchase(PlayBilling.ProductType.INAPP)

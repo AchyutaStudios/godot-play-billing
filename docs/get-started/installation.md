@@ -32,7 +32,7 @@ If the Android Build Template is already set up, you can skip this step. Otherwi
 
 To enable Play Billing permissions, follow these steps:
 
-1. From the project root, navigate to `android` > build`.
+1. From the project root, navigate to `android > build`.
 2. Locate `AndroidManifest.xml` and open it in your preferred text editor.
 3. Add the following line within the <manifest> tag:
 
@@ -41,7 +41,7 @@ To enable Play Billing permissions, follow these steps:
 
 ``` 
 
-4. The updated manifest file should look like this:
+The updated manifest file should look like this:
 
 ```xml linenums="1"
 <?xml version="1.0" encoding="utf-8"?>
