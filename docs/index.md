@@ -1,14 +1,16 @@
-# Get Started
+# Introduction
+
 Welcome to the **Godot Play Billing Library**! This guide will help you quickly integrate Google Play Billing into your Godot projects.
 
 This plugin simplifies integration with the Google Play Billing system by providing a GDScript-based interface. Developers can easily implement billing features without needing to write any Kotlin or Java code, making it accessible even for those without prior Android development experience.
+
 
 ## Quick Start
 
 To get started, follow these steps:
 
-- [Download the Library](./download).
-- [Follow Installation Guide](./installation).
+- [Download the Library](./get-started/download).
+- [Follow Installation Guide](./get-started/installation).
 - Run a simple billing example to verify your setup.
 
 
@@ -26,15 +28,3 @@ To successfully integrate this library, it’s essential to understand the funda
 
 - [Google Play's billing system](https://developer.android.com/google/play/billing).
 - [Integrate the Google Play Billing Library into your app](https://developer.android.com/google/play/billing/integrate)
-
-
-## Example
-
-```gdscript
-extends Node
-
-@onready var _play_billing: PlayBilling = $PlayBilling
-
-func _ready() -> void:
-    _play_billing.start_connection()
-```

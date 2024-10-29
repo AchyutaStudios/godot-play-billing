@@ -165,39 +165,6 @@ Categorizes product types for billing.
 
 ## Methods
 
-### string_to_product_type
-
-```gdscript
-static string_to_product_type(type_string: String) -> ProductType
-```
-
-Converts a string representation of a product type to the corresponding `ProductType` enum.
-
-**Parameters:**
-
-- `type_string`: The string representing the product type ("inapp" or "subs").
-
-**Returns:**
-The corresponding `ProductType` enum value.
-
----
-
-### product_type_to_string
-
-```gdscript
-static product_type_to_string(type: ProductType) -> String
-```
-
-Converts a `ProductType` enum value to its string representation.
-
-**Parameters:**
-
-- `type`: The `ProductType` enum value to convert.
-
-**Returns:**
-The string representation of the `ProductType`.
-
----
 
 ### start_connection
 
@@ -336,3 +303,37 @@ Acknowledges a purchase using the provided purchase token.
 **Parameters:**
 
 - `purchase_token`: The token of the purchase to acknowledge.
+
+---
+
+### string_to_product_type
+
+```gdscript
+static string_to_product_type(type_string: String) -> ProductType
+```
+
+Converts a string representation of a product type to the corresponding `ProductType` enum.
+
+**Parameters:**
+
+- `type_string`: The string representing the product type ("inapp" or "subs").
+
+**Returns:**
+The corresponding `ProductType` enum value.
+
+---
+
+### product_type_to_string
+
+```gdscript
+static product_type_to_string(type: ProductType) -> String
+```
+
+Converts a `ProductType` enum value to its string representation.
+
+**Parameters:**
+
+- `type`: The `ProductType` enum value to convert.
+
+**Returns:**
+The string representation of the `ProductType`.

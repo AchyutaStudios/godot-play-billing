@@ -35,8 +35,9 @@ theme:
     - content.code.annotation
     - content.code.copy
 nav:
+  - Introduction: index.md
   - Get Started:
-    - Home: get-started/index.md
+    # - Home: get-started/index.md
     - Download: get-started/download.md
     - Installation: get-started/installation.md
   - Integrate Play Billing: integrate.md
@@ -50,10 +51,10 @@ nav:
         - OneTimePurchaseOfferDetails: api-reference/models/product-detail/purchase-offer.md
         - InstallmentPlanDetails: api-reference/models/product-detail/installment-plan-details.md
         - SubscriptionOfferDetails: api-reference/models/product-detail/subscription-offer-details.md
-plugins:
- - redirects:
-    redirect_maps:
-      'index.md': 'get-started/index.md' 
+# plugins:
+#  - redirects:
+#     redirect_maps:
+#       'index.md': 'get-started/index.md' 
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
