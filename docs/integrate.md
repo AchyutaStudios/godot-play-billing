@@ -24,7 +24,7 @@ To get started, obtain a reference to the [PlayBilling](api-reference/play-billi
 
 Use [start_connection](api-reference/play-billing.md#start_connection) to establish a connection to the Play Billing server:
 
-```gdscript
+```gdscript linenums="1"
 @onready var _play_billing: PlayBilling = $PlayBilling
 
 func _ready():
@@ -61,7 +61,7 @@ func _on_play_billing_connect_error(error_code: PlayBilling.BillingResponseCode,
 
 Once the product query is successful, the [product_details_query_completed](api-reference/play-billing.md#product_details_query_completed) signal is emitted. If the query fails, the [product_details_query_error](./api-reference/play-billing.md#product_details_query_error) signal is emitted instead.
 
-```gdscript
+```gdscript linenums="1"
 func _on_play_billing_product_details_query_completed(product_detail_list: Array[ProductDetail]) -> void:
 	print(product_detail_list)
 
@@ -70,7 +70,7 @@ func _on_play_billing_product_details_query_error(error_code: PlayBilling.Billin
 	print(error_code, debug_message, product_id_list)
 ```
 
-The signal emits list of [ProductDetail](api-reference/models/product-detail/). Use the information provided in each [ProductDetail](api-reference/models/product-detail/) to display relevant product information for users.
+The signal emits list of [ProductDetail](api-reference/models/product-detail/index.md). Use the information provided in each [ProductDetail](api-reference/models/product-detail/index.md) to display relevant product information for users.
 
 
 ## Launch Purchase Flow
@@ -96,7 +96,7 @@ _play_billing.subscribe("product_id", "offer_token")
 
 After a succesfull [purchase](./api-reference/play-billing.md#purchase) or [subscribe](./api-reference/play-billing.md#subscribe) call, the payment flow will emit the [purchases_updated](./api-reference/play-billing.md#purchases_updated) signal. If payment flow fails [purchases_updated_error](./api-reference/play-billing.md#purchases_updated_error) signal is emitted instead.
 
-```gdscript
+```gdscript linenums="1"
 func _on_play_billing_purchases_updated(purchases: Array[Purchase]) -> void:
 	for purchase in purchases:
 		_process_purchase(purchase)
@@ -111,7 +111,7 @@ func _on_play_billing_purchases_updated_error(error_code: PlayBilling.BillingRes
 
 Products need to be acknowledged to complete the billing cycle. Use the [acknowledge_purchase](./api-reference/play-billing.md#acknowledge_purchase) method to acknowledge purchases.
 
-```gdscript
+```gdscript linenums="1"
 func _process_purchase(purchase: Purchase) -> void:
 # Save purchase for future verification.
 	if purchase.purchase_state == Purchase.PurchaseState.PURCHASED:
@@ -121,7 +121,7 @@ func _process_purchase(purchase: Purchase) -> void:
 
 Once a product is successfully acknowledged, the [purchase_acknowledged](./api-reference/play-billing.md#purchase_acknowledged) signal is emitted. If an error occurs, the [purhase_acknowledgement_error](./api-reference/play-billing.md#purchase_acknowledgement_error) signal is emitted instead.
 
-```gdscript
+```gdscript linenums="1"
 func _on_play_billing_purchase_acknowledged(purchase_token: String) -> void:
 	# _purchase is the saved list of purchases.
 	for purchase: Purchase in _purchases:
@@ -139,7 +139,7 @@ func _on_play_billing_purchase_acknowledgement_error(error_code: PlayBilling.Bil
 
 Consumable products, such as coins, can be purchased multiple times. To allow repeat purchases, consume the product after a successful purchase by calling [consume_purchase](./api-reference/play-billing.md#consume_purchase).  This automatically acknowledges the purchase, enabling the user to buy the product again.
 
-```gdscript
+```gdscript linenums="1"
 func _process_purchase(purchase: Purchase) -> void:
 	# Save purchase for future verification.
 	if purchase.purchase_state == Purchase.PurchaseState.PURCHASED:
@@ -149,7 +149,7 @@ func _process_purchase(purchase: Purchase) -> void:
 
 Once a product is successfully consumed, the [purchase_consumed](./api-reference/play-billing.md#purchase_consumed) signal is emitted. If an error occurs, the [purhase_consumption_error](./api-reference/play-billing.md#purchase_consumption_error) signal is emitted instead.
 
-```gdscript
+```gdscript linenums="1"
 func _on_play_billing_purchase_consumed(purchase_token: String) -> void:
 	# _purchase is the saved list of purchases.
 	for purchase: Purchase in _purchases:
@@ -174,7 +174,7 @@ _play_billing.query_purchase(PlayBilling.ProductType.INAPP)
 
 After successful query it emits [query_purchases_response](./api-reference/play-billing.md#query_purchases_response). If error occurs [query_purchase_error](./api-reference/play-billing.md#query_purchase_error) is emitted instead.
 
-```gdscript
+```gdscript linenums="1"
 func _on_play_billing_query_purchases_response(purchase_list: Array[Purchase]) -> void:
 	for purchase in purchase_list:
 		_process_purchase(purchase)

@@ -9,8 +9,8 @@ This plugin simplifies integration with the Google Play Billing system by provid
 
 To get started, follow these steps:
 
-- [Download the Library](./get-started/download).
-- [Follow Installation Guide](./get-started/installation).
+- [Download the Library](./get-started/download.md).
+- [Follow Installation Guide](./get-started/installation.md).
 - Run a simple billing example to verify your setup.
 
 

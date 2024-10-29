@@ -43,7 +43,7 @@ To enable Play Billing permissions, follow these steps:
 
 4. The updated manifest file should look like this:
 
-```xml
+```xml linenums="1"
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
