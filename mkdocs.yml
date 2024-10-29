@@ -52,8 +52,6 @@ nav:
         - SubscriptionOfferDetails: api-reference/models/product-detail/subscription-offer-details.md
 markdown_extensions:
   - pymdownx.superfences
-  # - pymdownx.highlight:
-  #     linenums: true
 extra:
   social:
     - icon: fontawesome/brands/x-twitter
