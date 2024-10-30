@@ -41,6 +41,7 @@ nav:
     - Installation: get-started/installation.md
   - Integrate Play Billing: integrate.md
   - Api Reference:
+    - Home: api-reference/index.md
     - Play Billing: api-reference/play-billing.md
     - Models:
       - Purchase: api-reference/models/purchase.md
