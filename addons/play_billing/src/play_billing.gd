@@ -149,6 +149,8 @@ func _init() -> void:
 			_plugin.purchase_consumption_error.connect(_purchase_consumption_error)
 			_plugin.purchase_acknowledged.connect(_purchase_acknowledged)
 			_plugin.purchase_acknowledgement_error.connect(_purchase_acknowledgement_error)
+			
+			print("GodotPlayBilling plugin initialized successfully.")
 		else:
 			printerr("GodotPlayBilling not found. Make sure you have enabled 'Gradle Build' and the GodotPlayBilling plugin in your Android export settings! IAP will not work.")
 	else:
