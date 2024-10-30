@@ -24,10 +24,10 @@ func _ready():
 ## Documentation
 Comprehensive documentation is available [here](https://achyutastudios.github.io/godot-play-billing) and includes:
 
-- [Introduction](https://achyutastudios.github.io/godot-play-billing/introduction)
+- [Introduction](https://achyutastudios.github.io/godot-play-billing/)
 - Getting Started
-  - [Download](https://achyutastudios.github.io/godot-play-billing/download)
-  - [Installation](https://achyutastudios.github.io/godot-play-billing/installation)
+  - [Download](https://achyutastudios.github.io/godot-play-billing/get-started/download/)
+  - [Installation](https://achyutastudios.github.io/godot-play-billing/get-started/installation/)
 - [Integration](https://achyutastudios.github.io/godot-play-billing/integrate/)
-API Reference
+- API Reference
  
