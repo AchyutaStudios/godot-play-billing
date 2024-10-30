@@ -15,10 +15,18 @@ To get started, follow these steps:
 ## Example
 
 ```gdscript
+# The PlayBilling node is provided by the plugin, 
+# encapsulating all necessary signals and methods for Google Play Billing.
 @onready var _play_billing: PlayBilling = $PlayBilling
 
+
 func _ready():
+    # Initiate the connection to the Google Play Billing service.
     _play_billing.start_connection()
+
+
+func _on_play_billing_connected() -> void:
+    # Connection is established.
 ```
 
 ## Documentation
@@ -29,5 +37,5 @@ Comprehensive documentation is available [here](https://achyutastudios.github.io
   - [Download](https://achyutastudios.github.io/godot-play-billing/get-started/download/)
   - [Installation](https://achyutastudios.github.io/godot-play-billing/get-started/installation/)
 - [Integration](https://achyutastudios.github.io/godot-play-billing/integrate/)
-- API Reference
+- [API Reference](https://achyutastudios.github.io/godot-play-billing/api-reference/)
  
