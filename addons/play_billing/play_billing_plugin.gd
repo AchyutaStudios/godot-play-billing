@@ -53,7 +53,7 @@ class PlayBillingExportPlugin extends EditorExportPlugin:
 				["res://addons/play_billing/aar/GodotPlayBilling-debug.aar"]
 			)
 		return PackedStringArray(
-			["res://addons/play_pilling/aar/GodotPlayBilling-release.aar"]
+			["res://addons/play_billing/aar/GodotPlayBilling-release.aar"]
 		)
 	
 	
