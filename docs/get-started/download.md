@@ -26,5 +26,3 @@ Welcome to the download page for the Godot Play Billing Library! Here, you can e
 2. Download the desired version of the plugin from the available releases.
 
 > Note: The plugin includes all necessary `.aar` and `.gdap` files for setup. Developers do not need to download or set up these files separately.
-
-**Note**: The plugin includes all necessary `.aar` and `.gdap` files for setup. Developers do not need to download or set up these files separately.
