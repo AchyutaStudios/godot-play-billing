@@ -11,7 +11,7 @@ After downloading the plugin from AssetLib, it needs to be enabled manually in t
 
 ![Enable Plugin](../assets/enable_plugin.png)
 
-**Note**: The plugin includes all necessary `.aar` and `.gdap` files for setup. Developers do not need to separately activate the plugin in the Android export settings.
+> Note: The plugin includes all necessary `.aar` and `.gdap` files for setup. Developers do not need to separately activate the plugin in the Android export settings.
 
 
 ## Install Android Build Template
