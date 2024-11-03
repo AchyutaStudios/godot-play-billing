@@ -10,7 +10,7 @@ To get started, follow these steps:
 
 - [Download the Library](https://achyutastudios.github.io/godot-play-billing/get-started/download/).
 - [Follow Installation Guide](https://achyutastudios.github.io/godot-play-billing/get-started/installation/).
-- Run a simple billing example to verify your setup.
+<!-- - Run a simple billing example to verify your setup. -->
 
 ## Example
 
