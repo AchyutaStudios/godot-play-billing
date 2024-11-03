@@ -5,6 +5,8 @@ Before proceeding with the integration, please ensure that you have completed th
 1. **Set Up Your Google Play Console Account:** Make sure your app is created and configured in the Google Play Console.
 2. **Configure In-App Purchase Products:** Set up the required in-app purchase products in the Google Play Console, as these will be necessary for testing and implementing the billing functionality.
 
+> Note: The Google Play billing server only connects with APKs downloaded from the Play Store. Ensure you have created at least an internal release in the Play Console so you can download the app from the Play Store for testing purposes.
+
 ## Add PlayBilling Node to your scene
 
 Once the plugin is enabled, the [PlayBilling](api-reference/play-billing.md) node will appear in the Node Hierarchy.
@@ -125,7 +127,7 @@ Once a product is successfully acknowledged, the [purchase_acknowledged](./api-r
 func _on_play_billing_purchase_acknowledged(purchase_token: String) -> void:
 	# _purchase is the saved list of purchases.
 	for purchase: Purchase in _purchases:
-		if token == purchase.purchase_token:
+		if purchase_token == purchase.purchase_token:
 			if "product_id" in purchase.product_ids:
 				# Award item to user.
 
@@ -153,7 +155,7 @@ Once a product is successfully consumed, the [purchase_consumed](./api-reference
 func _on_play_billing_purchase_consumed(purchase_token: String) -> void:
 	# _purchase is the saved list of purchases.
 	for purchase: Purchase in _purchases:
-		if token == purchase.purchase_token:
+		if purchase_token == purchase.purchase_token:
 			if "product_id" in purchase.product_ids:
 				# Award product to user.
 
