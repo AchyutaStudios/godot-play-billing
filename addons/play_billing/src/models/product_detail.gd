@@ -269,7 +269,7 @@ class SubscriptionOfferDetails:
 	## [param offer_token ]The token for the offer.[br]
 	## [param pricing_phase_list] List of pricing phases for the offer.[br]
 	func _init(base_plan_id: String, installment_plan_details: InstallmentPlanDetails, 
-		offer_id: String, offer_tags: Array, offer_token: String, 
+		offer_id: String, offer_tags: Array[String], offer_token: String, 
 		pricing_phase_list: Array[PricingPhase]):
 		self.base_plan_id = base_plan_id
 		self.installment_plan_details = installment_plan_details
@@ -282,8 +282,9 @@ class SubscriptionOfferDetails:
 	##
 	## [param json_string] The JSON data as a string.[br][br]
 	## Returns a new instance of SubscriptionOfferDetails created from the JSON data.[br]
-	static func from_json(json_string: String) -> SubscriptionOfferDetails:
-		var data = JSON.parse_string(json_string)
+	static func from_json(json_string: Variant) -> SubscriptionOfferDetails:
+		#var data = JSON.parse_string(json_string)
+		var data = json_string
 		
 		var installment_plan_details_string = data.get("installment_plan_details", null)
 		var installment_plan_details: InstallmentPlanDetails = null
@@ -295,11 +296,15 @@ class SubscriptionOfferDetails:
 		if pricing_phase_list_string != null:
 			pricing_phase_list = Utility.from_Json_to_PricingPhase_List(pricing_phase_list_string)
 		
+		var offer_tags = PackedStringArray()
+		for tag in data.get("offer_tags", []):
+			offer_tags.append(str(tag))
+		
 		return SubscriptionOfferDetails.new(
 			data.get("base_plan_id", ""),
 			installment_plan_details,
 			data.get("offer_id", ""),
-			data.get("offer_tags", []),
+			offer_tags,
 			data.get("offer_token", ""),
 			pricing_phase_list
 		)
