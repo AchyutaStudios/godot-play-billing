@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Play Billing"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [editor_plugins]
 
