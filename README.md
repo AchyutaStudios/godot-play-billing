@@ -38,4 +38,7 @@ Comprehensive documentation is available [here](https://achyutastudios.github.io
   - [Installation](https://achyutastudios.github.io/godot-play-billing/get-started/installation/)
 - [Integration](https://achyutastudios.github.io/godot-play-billing/integrate/)
 - [API Reference](https://achyutastudios.github.io/godot-play-billing/api-reference/)
+
+## Support
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N41CL8JJ)
  
