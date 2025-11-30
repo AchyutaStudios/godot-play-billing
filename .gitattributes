@@ -5,4 +5,4 @@
 * export-ignore
 
 # Include only the Godot plugin
-addons/ export-ignore=false
+addons/** export-ignore=false
