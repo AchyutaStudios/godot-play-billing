@@ -1,2 +1,8 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+
+# Ignore everything in ZIP exports by default
+* export-ignore
+
+# Include only the Godot plugin
+addons/ export-ignore=false
